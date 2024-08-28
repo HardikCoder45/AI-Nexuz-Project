@@ -1,0 +1,15 @@
+localhost:8080 {
+    @grpc {
+        header Content-Type *grpc*
+    }
+	reverse_proxy @grpc 
+localhost:50051 {
+		transport http {
+			versions h2c 
+		}
+	}
+    handle {
+        respond "NOT Found" 404
+    }
+}
+ 

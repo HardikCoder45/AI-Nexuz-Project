@@ -1,0 +1,346 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #6A2C70;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #6A2C70;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background-color: #F08A5D;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: 10px solid #F08A5D;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(180deg);
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+.round{
+  border-radius: 10;
+  width:2500px;
+  height:600px;
+  margin-right:50px;
+
+   
+}
+.borderc{
+  border-radius: 100%;
+  margin-bottom: 10px;
+ 
+ 
+ 
+
+}
+
+.sidebar-container {
+  position: absolute;
+  top: 80px; /* Adjust based on the height of your header */
+  left: 0;
+  width: 200px;
+  height: calc(100% - 80px); /* Adjust based on the height of your header */
+  overflow-y: auto;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.mcd{
+  overflow-y:auto;
+  height: calc(100% - 20px); /* Adjust based on the height of your header */
+  flex-grow: 1;
+  position: relative;
+  overflow: auto;
+  scrollbar-width: none;
+  scrollbar-width: 0.1;
+
+
+}
+.mcd::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+.menu-container {
+
+  overflow-y: auto;
+}
+.imgs1{
+  width: 230px;
+  height:170px;
+ 
+  border-radius: 10px;
+  margin:15px;
+  box-shadow: -1px -1px 13px 5px rgba(247,244,247,0.79)
+}
+ 
+.imgs1:hover{
+  transform: scale(1.1);
+}
+.imgs2{
+  width: 500px;
+  height:500px;
+ 
+  border-radius: 10px;
+  margin:15px;
+  
+}
+.savetxt{
+ padding: 20px;
+ font-weight: bold;
+
+font-size: 20px;
+ 
+ 
+}
+
+.margis{
+margin-top:50px;
+}
+.txt{
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-stretch: expanded;
+  font-kerning: inherit;
+margin-right: 20px;
+  font-variant: small-caps;
+}
+.txt2{
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-stretch: expanded;
+  font-kerning: inherit;
+  margin-left: 40px;
+  font-variant: small-caps;
+}
+.ab{
+  margin-right: 20px;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.app .pro-sidebar-menu .pro-menu-item--submenu .pro-submenu-title {
+  background-color: 'transparent';
+}
+.container2{
+  border: 1px solid white;
+  border-radius: 5px;
+  width:auto;
+  height:35px;
+            }
+            .c2:hover{
+              opacity:0.5
+            }
+            .button2 {
+              padding:10px 10px;
+              font-size: 18px;
+              outline: none;
+              border: none;
+              border-radius: 10px;
+              transition: 0.5s;
+              height: auto;
+              width: auto;
+             
+              cursor: pointer;
+              color: greenyellow;
+              box-shadow: 0 0 10px white, inset 0 0 10px white;
+            }
+            
+            .button2:hover {
+              opacity: 0.5px;
+            }
+      
+  
+  
+.taskbt{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  
+}
+.txt2{
+  margin: 15px;
+  font-size: 10px;
+}
+.image12{
+  box-shadow: 1px 2px #fff;
+  width:200px;
+  height:200px;
+  align-self: center;
+  margin:10px;
+}
+.svg-frame {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-frame svg {
+  position: absolute;
+  transition: .5s;
+  z-index: calc(1 - (0.2 * var(--j)));
+  transform-origin: center;
+  width: 344px;
+  height: 344px;
+  fill: none;
+}
+
+.svg-frame:hover svg {
+  transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
+}
+
+.svg-frame svg #center {
+  transition: .5s;
+  transform-origin: center;
+}
+
+.svg-frame:hover svg #center {
+  transform: rotate(-30deg) translateX(45px) translateY(-3px);
+}
+
+#out2 {
+  animation: rotate16 7s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#out3 {
+  animation: rotate16 3s ease-in-out infinite alternate;
+  transform-origin: center;
+  stroke: #ff0;
+}
+
+#inner3,
+#inner1 {
+  animation: rotate16 4s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#center1 {
+  fill: #ff0;
+  animation: rotate16 2s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes rotate16 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Translucent dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+.popup-content {
+    
+   
+  
+  
+  
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 0px 30px rgba(227,228,237,0.37);
+  border: 2px solid rgba(255,255,255,0.18);
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}

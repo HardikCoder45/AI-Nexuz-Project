@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package service;
+
+service MyService {
+  rpc ImageGen (ImageGenRequest) returns (ImageGenResponse);
+  rpc ImgReco (ImgRecoRequest) returns (ImgRecoResponse);
+  rpc Integrate (IntegrateRequest) returns (IntegrateResponse);
+  rpc TrainWakeWordModel (TrainWakeWordModelRequest) returns (TrainWakeWordModelResponse);
+  rpc CheckModel (CheckModelRequest) returns (CheckModelResponse);
+}
+
+message ImageGenRequest {
+  string model = 1;
+  string query = 2;
+  string negative_query = 3;
+  int32 guidance = 4;
+  int32 steps = 5;
+}
+
+message ImageGenResponse {
+  string result = 1;
+}
+
+message ImgRecoRequest {
+  bytes blob = 1;
+  string uid = 2;
+}
+
+message ImgRecoResponse {
+  string result = 1;
+}
+
+message IntegrateRequest {
+  bytes data = 1;
+}
+
+message IntegrateResponse {
+  string result = 1;
+}
+
+message TrainWakeWordModelRequest {
+  repeated string links = 1;
+  repeated string neg_links = 2;
+  string uid = 3;
+}
+
+message TrainWakeWordModelResponse {
+  string result = 1;
+}
+
+message CheckModelRequest {
+  string uid = 1;
+}
+
+message CheckModelResponse {
+  bool exists = 1;
+}
