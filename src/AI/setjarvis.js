@@ -44,7 +44,7 @@ const[NegLinks,setNegLinks] = useState([])
         
       })
     
- const model_status =    axios.post("http://34.131.167.210:8000/check",{'uid':auth.currentUser.uid})
+ const model_status =    axios.post("https://nexuz-backend-apvrad3wmq-em.a.run.app/check",{'uid':auth.currentUser.uid})
  console.log(model_status)
    
   }, []);
@@ -151,7 +151,7 @@ if (checker === "passed"){
     "uid":auth.currentUser.uid
     
   }
-  await axios.post('http://34.131.167.210:8000/train_wake_word_model', data).then((res) => {console.log(res)})
+  await axios.post('https://nexuz-backend-apvrad3wmq-em.a.run.app/train_wake_word_model', data).then((res) => {console.log(res)})
   }
 else {
   toast.warning('warning: Try After 3-4 seconds', {
