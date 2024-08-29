@@ -13,7 +13,7 @@ export default function FaceValidation() {
   const [matchingStatus, setMatchingStatus] = useState('');
 //https://youtube.com/shorts/5UlXLHHHpPM?si=KssRyQ2uicERjEwv
   useEffect(() => {
-    nav("/home/main")
+     
     const captureImage = async () => {
       const imageSrc = webcamRef.current.getScreenshot();
       if (imageSrc) {
@@ -21,7 +21,7 @@ export default function FaceValidation() {
         const data = { blob: imageSrc, uid: auth.currentUser.uid };
         
         try {
-          const response = await axios.post('http://34.131.167.210:8000/imgreco', data);
+          const response = await axios.post('https://nexuz-backend-apvrad3wmq-em.a.run.app/imgreco', data);
           return response.data;
         } catch (error) {
           console.error('Error sending image:', error);
