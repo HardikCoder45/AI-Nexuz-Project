@@ -45,7 +45,7 @@ const ImageGeneration = () => {
   //   })
     try {
 
-      const response = await axios.post('http://34.131.167.210:8000/image_gen', {
+      const response = await axios.post('https://nexuz-backend-apvrad3wmq-em.a.run.app/image_gen', {
         query: prompt,
         model: model,
         negative_query: negativePrompt,
