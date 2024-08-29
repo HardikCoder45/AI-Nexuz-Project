@@ -29,7 +29,7 @@ const FaceIntegrate = () => {
     if (imageSrc) {
       const blob = await fetch(imageSrc).then((res) => res.blob());
       try {
-        await axios.post('http://34.131.167.210:8000/integrate', blob).then((res) => {
+        await axios.post('https://nexuz-backend-apvrad3wmq-em.a.run.app/integrate', blob).then((res) => {
           const result = res.data;
           console.log(result);
           if (result === 'Found') {
